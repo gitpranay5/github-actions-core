@@ -32,7 +32,3 @@ jobs:
         uses: ./.github/actions/js-custom-action
         with:
           name: Pranay
-  call-reusable-workflow:
-    uses: gitpranay5/githubcore/.github/workflows/reusable.yml@main
-    with:
-      name: Pranay
