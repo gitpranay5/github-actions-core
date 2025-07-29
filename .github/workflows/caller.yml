@@ -33,9 +33,6 @@ jobs:
         with:
           name: Pranay
   call-reusable-workflow:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-      - name: Call Reusable Workflow
-        uses: ./.github/workflows/reusable.yml
+    uses: gitpranay5/githubcore/.github/workflows/reusable.yml@main
+    with:
+      name: Pranay
