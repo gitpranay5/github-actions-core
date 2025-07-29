@@ -1,0 +1,11 @@
+name: Docker Custom Action
+description: A custom Docker action that runs a script in a Docker container
+inputs:
+  name:
+    description: Name to say hello
+    required: true
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.name }}

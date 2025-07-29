@@ -1,0 +1,13 @@
+name: Composite Action
+description: A composite GitHub Action that combines multiple actions "simple composite action"
+inputs:
+  name:
+    description: required name to say hello
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - name: saying hello
+      run: echo "Hello ${{ inputs.name }}, I am a composite action!"
+      shell: bash

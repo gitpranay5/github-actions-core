@@ -1,0 +1,35 @@
+name: Call All Composite and Custome Actions
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+jobs:
+  call-composite-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Call Composite Action
+        uses: ./.github/actions/composite-action
+        with:
+          name: Pranay
+  call-docker-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call Docker Action
+        uses: ./.github/actions/docker-custom-action
+        with:
+            name: Pranay
+  call-js-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call JS Action
+        uses: ./.github/actions/js-custom-action
+        with:
+          name: Pranay
+  call-reusable-workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call Reusable Workflow
+        uses: ./.github/workflows/reusable.yml

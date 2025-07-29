@@ -1,0 +1,9 @@
+name: JS Custom Action
+description: A custom JavaScript action that runs a script in a Node.js environment
+inputs:
+  name:
+    description: Name to say hello
+    required: true
+runs:
+  using: "node20"
+  main: "index.js"
